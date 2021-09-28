@@ -13,35 +13,21 @@ struct Home: View {
         
         ZStack{
             
-            // to get screen size for image...
-            GeometryReader{proxy in
-                
-                let frame = proxy.frame(in: .global)
-                
-                Image(selectedTab.image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: frame.width, height: frame.height, alignment: .center)
-                    // Why we using corner radius
-                    // because image in SwiftUI using .fill
-                    // will require corner radius or clipshape to cut the image....
-                    .cornerRadius(0)
-            }
-            .ignoresSafeArea()
+           
             
             // Custom Carousel...
             
             VStack{
                 
-                Text("Let's Go With")
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
+              //  Text("Let's Go With")
+               //     .fontWeight(.bold)
+               //     .foregroundColor(.white)
                 
-                Text("Pocotrip")
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .foregroundColor(.white)
-                    .padding(.bottom,30)
+             //   Text("Pocotrip")
+               //     .font(.largeTitle)
+               //     .fontWeight(.heavy)
+               //     .foregroundColor(.white)
+               //     .padding(.bottom,30)
                 
                 // Carousel...
                 
@@ -58,48 +44,69 @@ struct Home: View {
                                 
                                 Image(trip.image)
                                     .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: frame.width - 10, height: frame.height, alignment: .center)
-                                    .cornerRadius(4)
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: frame.width - 20, height: frame.height - 45, alignment: .center)
+                                    //.cornerRadius(4)
                                     .tag(trip)
+                                   // .padding(.bottom,10)
                             }
                         }
                         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                     }
                     // max Limit
                     // half of the screen...
-                    .frame(height: UIScreen.main.bounds.height / 2.2)
+                    .frame(height: UIScreen.main.bounds.height / 3.3)
                     
                     Text(selectedTab.title)
                         .font(.title)
                         .fontWeight(.bold)
+                        .foregroundColor(Color.white)
                         .padding(.top,20)
+                      //  .padding(.bottom)
+                    
+                    Text(selectedTab.subTitle)
+                        .font(.title2)
+                        .fontWeight(.light)
+                     //   .padding(.top,20)
+                        .foregroundColor(Color.white)
                         .padding(.bottom,18)
                     
                     // Page Control From UIKit...
                     PageControl(maxPages: trips.count, currentPage: getIndex())
                 }
-                .padding(.top)
+                .padding(.top,100)
                 .padding(.horizontal,10)
                 .padding(.bottom,5)
                 // Going to clip it using custom Shape...
-                .background(Color.white.clipShape(CustomShape()).cornerRadius(10))
+               // .background(Color.gray)
                 .padding(.horizontal,20)
                 
+                
+                Spacer()
                 Button(action: {}, label: {
-                    Text("GET STARTED")
+                    Text("НАЧАТЬ")
                         .fontWeight(.bold)
-                        .foregroundColor(.white)
+                       
+                        .foregroundColor(Color.black)
                         .padding(.vertical,18)
-                        .frame(maxWidth: .infinity)
-                        .background(Color("blue"))
-                        .cornerRadius(10)
+                        .padding(.horizontal,60)
+                      //  .frame(maxWidth: .infinity)
+                        .background(Color.white
+                                        .cornerRadius(/*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/))
+                        .cornerRadius(50)
                 })
                 .padding(.top,30)
                 .padding(.horizontal)
+                .padding(.bottom,150)
             }
-            .padding()
+            
         }
+        .padding(.top,0)
+        .background(Color(UIColor(red: 29/255.0, green: 29/255.0, blue: 29/255.0, alpha: 1))
+                        )
+        .ignoresSafeArea()
+        
+               // .ignoresSafeArea()
     }
     
     // getting Index...
@@ -112,6 +119,7 @@ struct Home: View {
         return index
     }
 }
+
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
