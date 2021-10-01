@@ -1,4 +1,5 @@
 import SwiftUI
+import Combine
 
 struct Home: View {
     // To capture the current tab...
@@ -83,6 +84,8 @@ struct Home: View {
                 
                 
                 Spacer()
+               
+                
                 Button(action: {}, label: {
                     Text("НАЧАТЬ")
                         .fontWeight(.bold)
@@ -98,7 +101,10 @@ struct Home: View {
                 .padding(.top,30)
                 .padding(.horizontal)
                 .padding(.bottom,150)
+                
+                
             }
+            
             
         }
         .padding(.top,0)
@@ -108,6 +114,7 @@ struct Home: View {
         
                // .ignoresSafeArea()
     }
+    
     
     // getting Index...
     func getIndex()->Int{
