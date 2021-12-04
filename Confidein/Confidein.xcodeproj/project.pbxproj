@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09B206912754F38A00EBDB00 /* libMumbleKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B206872754F12C00EBDB00 /* libMumbleKit.a */; };
+		09B206A42754FD9800EBDB00 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B206A22754FD8D00EBDB00 /* AudioToolbox.framework */; };
+		09B206AD2754FDA600EBDB00 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B206AC2754FDA600EBDB00 /* CFNetwork.framework */; };
+		09B206AF2754FDB000EBDB00 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B206AE2754FDB000EBDB00 /* Security.framework */; };
 		09D9B01A268DE44900374B2A /* ConfideinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D9B019268DE44900374B2A /* ConfideinApp.swift */; };
 		09D9B01C268DE44900374B2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D9B01B268DE44900374B2A /* ContentView.swift */; };
 		09D9B01E268DE44B00374B2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09D9B01D268DE44B00374B2A /* Assets.xcassets */; };
@@ -20,6 +24,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		09B206862754F12C00EBDB00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09B2067B2754F12B00EBDB00 /* MumbleKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 28BCF2C1132AE3B40003AEC1;
+			remoteInfo = "MumbleKit (iOS)";
+		};
+		09B206882754F12C00EBDB00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09B2067B2754F12B00EBDB00 /* MumbleKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2845A71A132D9B2F0034D631;
+			remoteInfo = "MumbleKit (Mac)";
+		};
+		09B2068E2754F2EF00EBDB00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09B2067B2754F12B00EBDB00 /* MumbleKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 28BCF2C0132AE3B40003AEC1;
+			remoteInfo = "MumbleKit (iOS)";
+		};
 		09D9B028268DE44B00374B2A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 09D9B00E268DE44800374B2A /* Project object */;
@@ -37,6 +62,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09B2067B2754F12B00EBDB00 /* MumbleKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MumbleKit.xcodeproj; path = ../../mumblekit/MumbleKit.xcodeproj; sourceTree = "<group>"; };
+		09B206A22754FD8D00EBDB00 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		09B206AC2754FDA600EBDB00 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		09B206AE2754FDB000EBDB00 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		09D9B016268DE44900374B2A /* Confidein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Confidein.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D9B019268DE44900374B2A /* ConfideinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfideinApp.swift; sourceTree = "<group>"; };
 		09D9B01B268DE44900374B2A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +89,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09B206AD2754FDA600EBDB00 /* CFNetwork.framework in Frameworks */,
+				09B206912754F38A00EBDB00 /* libMumbleKit.a in Frameworks */,
+				09B206AF2754FDB000EBDB00 /* Security.framework in Frameworks */,
+				09B206A42754FD9800EBDB00 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +113,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09B2067C2754F12B00EBDB00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09B206872754F12C00EBDB00 /* libMumbleKit.a */,
+				09B206892754F12C00EBDB00 /* MumbleKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09B206902754F38A00EBDB00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09B206AE2754FDB000EBDB00 /* Security.framework */,
+				09B206AC2754FDA600EBDB00 /* CFNetwork.framework */,
+				09B206A22754FD8D00EBDB00 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		09D9B00D268DE44800374B2A = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +139,7 @@
 				09D9B02A268DE44B00374B2A /* ConfideinTests */,
 				09D9B035268DE44B00374B2A /* ConfideinUITests */,
 				09D9B017268DE44900374B2A /* Products */,
+				09B206902754F38A00EBDB00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +156,7 @@
 		09D9B018268DE44900374B2A /* Confidein */ = {
 			isa = PBXGroup;
 			children = (
+				09B2067B2754F12B00EBDB00 /* MumbleKit.xcodeproj */,
 				09D9B047268DEDA200374B2A /*  View */,
 				09D9B044268DE9E400374B2A /* Model */,
 				09D9B019268DE44900374B2A /* ConfideinApp.swift */,
@@ -172,6 +226,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				09B2068F2754F2EF00EBDB00 /* PBXTargetDependency */,
 			);
 			name = Confidein;
 			productName = Confidein;
@@ -247,6 +302,12 @@
 			mainGroup = 09D9B00D268DE44800374B2A;
 			productRefGroup = 09D9B017268DE44900374B2A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 09B2067C2754F12B00EBDB00 /* Products */;
+					ProjectRef = 09B2067B2754F12B00EBDB00 /* MumbleKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				09D9B015268DE44900374B2A /* Confidein */,
@@ -255,6 +316,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		09B206872754F12C00EBDB00 /* libMumbleKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMumbleKit.a;
+			remoteRef = 09B206862754F12C00EBDB00 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09B206892754F12C00EBDB00 /* MumbleKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MumbleKit.framework;
+			remoteRef = 09B206882754F12C00EBDB00 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		09D9B014268DE44900374B2A /* Resources */ = {
@@ -315,6 +393,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		09B2068F2754F2EF00EBDB00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "MumbleKit (iOS)";
+			targetProxy = 09B2068E2754F2EF00EBDB00 /* PBXContainerItemProxy */;
+		};
 		09D9B029268DE44B00374B2A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 09D9B015268DE44900374B2A /* Confidein */;
@@ -379,7 +462,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -434,7 +517,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -453,8 +536,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Confidein/Preview Content\"";
 				DEVELOPMENT_TEAM = 268QRW4R7C;
 				ENABLE_PREVIEWS = YES;
+				HEADER_SEARCH_PATHS = "\"/Users/shestakovboris/Documents/confidein/mumblekit/src/\"";
 				INFOPLIST_FILE = Confidein/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,7 +546,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = BorisShestakov.Confidein;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -475,8 +559,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Confidein/Preview Content\"";
 				DEVELOPMENT_TEAM = 268QRW4R7C;
 				ENABLE_PREVIEWS = YES;
+				HEADER_SEARCH_PATHS = "\"/Users/shestakovboris/Documents/confidein/mumblekit/src/\"";
 				INFOPLIST_FILE = Confidein/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,7 +569,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = BorisShestakov.Confidein;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
