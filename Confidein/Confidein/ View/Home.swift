@@ -22,16 +22,7 @@ struct Home: View {
             
             VStack{
                 
-              //  Text("Let's Go With")
-               //     .fontWeight(.bold)
-               //     .foregroundColor(.white)
-                
-             //   Text("Pocotrip")
-               //     .font(.largeTitle)
-               //     .fontWeight(.heavy)
-               //     .foregroundColor(.white)
-               //     .padding(.bottom,30)
-                
+             
                 // Carousel...
                 
                 VStack {
@@ -48,7 +39,7 @@ struct Home: View {
                                 Image(trip.image)
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                    .frame(width: frame.width - 20, height: frame.height - 45, alignment: .center)
+                                    .frame(width: frame.width - 70, height: frame.height - 45, alignment: .center)
                                     //.cornerRadius(4)
                                     .tag(trip)
                                    // .padding(.bottom,10)
@@ -88,7 +79,21 @@ struct Home: View {
                 Spacer()
                
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    var message:String = ""
+                    // Call objective-c class method directly.
+                    TestObjectiveCClass.printHello()
+                    
+                    // Create an instance of objective-c class.
+                    let testObject:TestObjectiveCClass = TestObjectiveCClass()
+                    
+                    // Invoke the objective-c class's instance method.
+                    message = testObject.sayHello()
+
+                    // Print the message in Xcode debug console.
+                    print(message)
+                    
+                }, label: {
                     Text("НАЧАТЬ")
                         .fontWeight(.bold)
                        

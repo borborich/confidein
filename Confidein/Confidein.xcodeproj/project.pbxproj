@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0905808F27678AB1003C45F2 /* TestObjectiveCClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0905808E27678AB1003C45F2 /* TestObjectiveCClass.m */; };
+		0905809427678C0C003C45F2 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0905809327678C0C003C45F2 /* Test.swift */; };
 		09B206912754F38A00EBDB00 /* libMumbleKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B206872754F12C00EBDB00 /* libMumbleKit.a */; };
 		09B206A42754FD9800EBDB00 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B206A22754FD8D00EBDB00 /* AudioToolbox.framework */; };
 		09B206AD2754FDA600EBDB00 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B206AC2754FDA600EBDB00 /* CFNetwork.framework */; };
@@ -62,10 +64,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0905808C27678A10003C45F2 /* TestObjectiveCClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestObjectiveCClass.h; sourceTree = "<group>"; };
+		0905808D27678AB1003C45F2 /* Confidein-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Confidein-Bridging-Header.h"; sourceTree = "<group>"; };
+		0905808E27678AB1003C45F2 /* TestObjectiveCClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestObjectiveCClass.m; sourceTree = "<group>"; };
+		0905809327678C0C003C45F2 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		09B2067B2754F12B00EBDB00 /* MumbleKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MumbleKit.xcodeproj; path = ../../mumblekit/MumbleKit.xcodeproj; sourceTree = "<group>"; };
 		09B206A22754FD8D00EBDB00 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		09B206AC2754FDA600EBDB00 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		09B206AE2754FDB000EBDB00 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		09D2ED28275B880C00B24211 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		09D9B016268DE44900374B2A /* Confidein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Confidein.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D9B019268DE44900374B2A /* ConfideinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfideinApp.swift; sourceTree = "<group>"; };
 		09D9B01B268DE44900374B2A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -164,6 +171,9 @@
 				09D9B01D268DE44B00374B2A /* Assets.xcassets */,
 				09D9B022268DE44B00374B2A /* Info.plist */,
 				09D9B01F268DE44B00374B2A /* Preview Content */,
+				0905808C27678A10003C45F2 /* TestObjectiveCClass.h */,
+				0905808E27678AB1003C45F2 /* TestObjectiveCClass.m */,
+				0905808D27678AB1003C45F2 /* Confidein-Bridging-Header.h */,
 			);
 			path = Confidein;
 			sourceTree = "<group>";
@@ -208,6 +218,8 @@
 				09D9B048268DEDE200374B2A /* Home.swift */,
 				09D9B04A268E196600374B2A /* PageControl.swift */,
 				09D9B04C268E19F400374B2A /* CustomShape.swift */,
+				09D2ED28275B880C00B24211 /* Header.h */,
+				0905809327678C0C003C45F2 /* Test.swift */,
 			);
 			path = " View";
 			sourceTree = "<group>";
@@ -280,6 +292,7 @@
 				TargetAttributes = {
 					09D9B015268DE44900374B2A = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1240;
 					};
 					09D9B026268DE44B00374B2A = {
 						CreatedOnToolsVersion = 12.5;
@@ -370,7 +383,9 @@
 				09D9B04D268E19F400374B2A /* CustomShape.swift in Sources */,
 				09D9B01C268DE44900374B2A /* ContentView.swift in Sources */,
 				09D9B049268DEDE200374B2A /* Home.swift in Sources */,
+				0905809427678C0C003C45F2 /* Test.swift in Sources */,
 				09D9B01A268DE44900374B2A /* ConfideinApp.swift in Sources */,
+				0905808F27678AB1003C45F2 /* TestObjectiveCClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +483,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Confidein/Confidein-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -522,6 +538,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "Confidein/Confidein-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -532,6 +549,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Confidein/Preview Content\"";
 				DEVELOPMENT_TEAM = 268QRW4R7C;
@@ -545,6 +563,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = BorisShestakov.Confidein;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Confidein/Confidein-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -555,6 +575,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Confidein/Preview Content\"";
 				DEVELOPMENT_TEAM = 268QRW4R7C;
@@ -568,6 +589,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = BorisShestakov.Confidein;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Confidein/Confidein-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -687,8 +687,9 @@
 				2845A780132D9BF50034D631 /* Public Headers */,
 				2845A77F132D9BF10034D631 /* Sources */,
 			);
-			path = MumbleKit;
-			sourceTree = "<group>";
+			name = MumbleKit;
+			path = /Users/shestakovboris/Documents/confidein/mumblekit;
+			sourceTree = "<absolute>";
 		};
 		28CC3718132EDC7900241269 /* iOS Frameworks */ = {
 			isa = PBXGroup;
