@@ -80,18 +80,8 @@ struct Home: View {
                
                 
                 Button(action: {
-                    var message:String = ""
-                    // Call objective-c class method directly.
-                    TestObjectiveCClass.printHello()
-                    
-                    // Create an instance of objective-c class.
-                    let testObject:TestObjectiveCClass = TestObjectiveCClass()
-                    
-                    // Invoke the objective-c class's instance method.
-                    message = testObject.sayHello()
-
-                    // Print the message in Xcode debug console.
-                    print(message)
+                    let connCtrlr = MUConnectionController.shared;              connCtrlr()?.connet(toHostname: "217.25.89.74", port: 64738, withUsername: "BorisIphoneMumbleApp", andPassword: "");
+                                       print("должно быть подключение")
                     
                 }, label: {
                     Text("НАЧАТЬ")

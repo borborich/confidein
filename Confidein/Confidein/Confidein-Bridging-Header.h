@@ -6,6 +6,7 @@
 //
 
 #import "TestObjectiveCClass.h"
+#import "MUConnectionController.h"
 #import <MumbleKit/MKConnection.h>
 #import <MumbleKit/MKServerModel.h>
 #import <MumbleKit/MKCertificate.h>

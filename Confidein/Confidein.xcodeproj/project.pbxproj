@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0905808F27678AB1003C45F2 /* TestObjectiveCClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0905808E27678AB1003C45F2 /* TestObjectiveCClass.m */; };
 		0905809427678C0C003C45F2 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0905809327678C0C003C45F2 /* Test.swift */; };
+		092C55902770A1F1000EB77E /* MUConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092C558F2770A1F1000EB77E /* MUConnectionController.m */; };
 		09B206912754F38A00EBDB00 /* libMumbleKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B206872754F12C00EBDB00 /* libMumbleKit.a */; };
 		09B206A42754FD9800EBDB00 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B206A22754FD8D00EBDB00 /* AudioToolbox.framework */; };
 		09B206AD2754FDA600EBDB00 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B206AC2754FDA600EBDB00 /* CFNetwork.framework */; };
@@ -68,6 +69,8 @@
 		0905808D27678AB1003C45F2 /* Confidein-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Confidein-Bridging-Header.h"; sourceTree = "<group>"; };
 		0905808E27678AB1003C45F2 /* TestObjectiveCClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestObjectiveCClass.m; sourceTree = "<group>"; };
 		0905809327678C0C003C45F2 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		092C558D2770A1CD000EB77E /* MUConnectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUConnectionController.h; sourceTree = "<group>"; };
+		092C558F2770A1F1000EB77E /* MUConnectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUConnectionController.m; sourceTree = "<group>"; };
 		09B2067B2754F12B00EBDB00 /* MumbleKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MumbleKit.xcodeproj; path = ../../mumblekit/MumbleKit.xcodeproj; sourceTree = "<group>"; };
 		09B206A22754FD8D00EBDB00 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		09B206AC2754FDA600EBDB00 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -173,6 +176,8 @@
 				09D9B01F268DE44B00374B2A /* Preview Content */,
 				0905808C27678A10003C45F2 /* TestObjectiveCClass.h */,
 				0905808E27678AB1003C45F2 /* TestObjectiveCClass.m */,
+				092C558D2770A1CD000EB77E /* MUConnectionController.h */,
+				092C558F2770A1F1000EB77E /* MUConnectionController.m */,
 				0905808D27678AB1003C45F2 /* Confidein-Bridging-Header.h */,
 			);
 			path = Confidein;
@@ -383,6 +388,7 @@
 				09D9B04D268E19F400374B2A /* CustomShape.swift in Sources */,
 				09D9B01C268DE44900374B2A /* ContentView.swift in Sources */,
 				09D9B049268DEDE200374B2A /* Home.swift in Sources */,
+				092C55902770A1F1000EB77E /* MUConnectionController.m in Sources */,
 				0905809427678C0C003C45F2 /* Test.swift in Sources */,
 				09D9B01A268DE44900374B2A /* ConfideinApp.swift in Sources */,
 				0905808F27678AB1003C45F2 /* TestObjectiveCClass.m in Sources */,
