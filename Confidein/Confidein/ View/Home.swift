@@ -2,9 +2,54 @@ import SwiftUI
 import Combine
 
 
+struct ServerMessage: Decodable {
+    let message: String
+}
+
+class HttpAuth: ObservableObject {
+    var didChange = PassthroughSubject<HttpAuth, Never>()
+    
+    var authenticated = false {
+        didSet {
+            didChange.send(self)
+        }
+    }
+    
+    func checkDetails(userStatus: String, userBlock: String, username: String, password: String) {
+        guard let url = URL(string: "http://217.25.89.74:4000/users/register") else { return }
+        
+        let body: [String: String] = ["userStatus": userStatus, "userBlock": userBlock, "username": username, "password": password]
+        
+        let finalBody = try! JSONSerialization.data(withJSONObject: body)
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = finalBody
+        
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+           
+            guard let data = data else { return }
+            
+            let finalData = try! JSONDecoder().decode(ServerMessage.self, from: data)
+            
+            print(finalData)
+            
+            
+        }.resume()
+    }
+}
+
 
 struct Home: View {
     // To capture the current tab...
+    @State private var userStatus: String = "firstName33"
+    @State private var userBlock: String = "lastName33"
+    @State private var username: String = "username33"
+    @State private var password: String = "password"
+    let deviceID = UIDevice.current.identifierForVendor?.uuidString
+    var manager = HttpAuth()
     @State var selectedTab: Trip = trips[0]
     
     // disabling bounces...
@@ -80,7 +125,9 @@ struct Home: View {
                
                 
                 Button(action: {
+                    print(deviceID!)
                     
+                    self.manager.checkDetails(userStatus: self.userStatus, userBlock: self.userBlock, username: deviceID!, password: self.password)
                 }, label: {
                     Text("НАЧАТЬ")
                         .fontWeight(.bold)
