@@ -31,7 +31,7 @@ struct InputTextField {
 }
 
 struct ServerMessage: Decodable {
-    let status, message: String
+    let message: String
 }
 
 class HttpAuth: ObservableObject {
@@ -44,7 +44,7 @@ class HttpAuth: ObservableObject {
     }
     
     func checkDetails(firstName: String, lastName: String, username: String, password: String) {
-        guard let url = URL(string: "http://217.25.89.74:4000/users/authenticate") else { return }
+        guard let url = URL(string: "http://217.25.89.74:4000/users/register") else { return }
         
         let body: [String: String] = ["firstName": firstName, "lastName": lastName, "username": username, "password": password]
         
@@ -71,11 +71,11 @@ class HttpAuth: ObservableObject {
 
 struct ContentView: View {
     
-    @State private var firstName: String = "firstName1"
-    @State private var lastName: String = "lastName1"
-    @State private var username: String = "username1"
-    @State private var password: String = "password1"
-    
+    @State private var firstName: String = "firstName33"
+    @State private var lastName: String = "lastName33"
+    @State private var username: String = "username33"
+    @State private var password: String = "password33"
+    let deviceID = UIDevice.current.identifierForVendor?.uuidString
     var manager = HttpAuth()
     
     var body: some View {
@@ -93,9 +93,9 @@ struct ContentView: View {
             print(self.lastName)
             print(self.username)
             print(self.password)
+            print(deviceID!)
             
-            
-            self.manager.checkDetails(firstName: self.firstName, lastName: self.lastName, username: self.username, password: self.password)
+            self.manager.checkDetails(firstName: self.firstName, lastName: self.lastName, username: deviceID!, password: self.password)
             
         }, label: {
             Text("login")
