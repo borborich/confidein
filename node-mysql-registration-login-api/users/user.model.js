@@ -4,10 +4,10 @@ module.exports = model;
 
 function model(sequelize) {
     const attributes = {
-        firstName: { type: DataTypes.STRING, allowNull: true },
-        lastName: { type: DataTypes.STRING, allowNull: true },
+        userStatus: { type: DataTypes.STRING, allowNull: false },
+        userblock: { type: DataTypes.STRING, allowNull: false },
         username: { type: DataTypes.STRING, allowNull: false },
-        hash: { type: DataTypes.STRING, allowNull: true }
+        hash: { type: DataTypes.STRING, allowNull: false }
     };
 
     const options = {

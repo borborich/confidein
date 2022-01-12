@@ -8,27 +8,27 @@
 import SwiftUI
 import Combine
 
-struct InputTextField {
-    
-    @Binding var textBinding: String
-    
-    let lable: String
-    let placeholder: String
-    let secureTextField: Bool
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text(lable).font(.headline)
-            if secureTextField {
-                SecureField(placeholder, text: $textBinding)
-                    
-            } else {
-                TextField(placeholder, text: $textBinding)
-            }
-        }
-    }
-    
-}
+//struct InputTextField {
+//
+//    @Binding var textBinding: String
+//
+//    let lable: String
+//    let placeholder: String
+//    let secureTextField: Bool
+//
+//    var body: some View {
+//        VStack(alignment: .leading) {
+//            Text(lable).font(.headline)
+//            if secureTextField {
+//                SecureField(placeholder, text: $textBinding)
+//
+//            } else {
+//                TextField(placeholder, text: $textBinding)
+//            }
+//        }
+//    }
+//
+//}
 
 struct ServerMessage: Decodable {
     let message: String

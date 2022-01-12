@@ -80,8 +80,6 @@ struct Home: View {
                
                 
                 Button(action: {
-                    let connCtrlr = MUConnectionController.shared;              connCtrlr()?.connet(toHostname: "217.25.89.74", port: 64738, withUsername: "BorisIphoneMumbleApp", andPassword: "");
-                                       print("должно быть подключение")
                     
                 }, label: {
                     Text("НАЧАТЬ")
