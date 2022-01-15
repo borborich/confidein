@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		094C7A1527917DBB00E398F9 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094C7A1427917DBB00E398F9 /* Welcome.swift */; };
 		09D9B01A268DE44900374B2A /* ConfideinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D9B019268DE44900374B2A /* ConfideinApp.swift */; };
 		09D9B01C268DE44900374B2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D9B01B268DE44900374B2A /* ContentView.swift */; };
 		09D9B01E268DE44B00374B2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09D9B01D268DE44B00374B2A /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		094C7A1427917DBB00E398F9 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		09D9B016268DE44900374B2A /* Confidein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Confidein.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D9B019268DE44900374B2A /* ConfideinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfideinApp.swift; sourceTree = "<group>"; };
 		09D9B01B268DE44900374B2A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				09D9B048268DEDE200374B2A /* Home.swift */,
 				09D9B04A268E196600374B2A /* PageControl.swift */,
 				09D9B04C268E19F400374B2A /* CustomShape.swift */,
+				094C7A1427917DBB00E398F9 /* Welcome.swift */,
 			);
 			path = " View";
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				09D9B04D268E19F400374B2A /* CustomShape.swift in Sources */,
 				09D9B01C268DE44900374B2A /* ContentView.swift in Sources */,
 				09D9B049268DEDE200374B2A /* Home.swift in Sources */,
+				094C7A1527917DBB00E398F9 /* Welcome.swift in Sources */,
 				09D9B01A268DE44900374B2A /* ConfideinApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

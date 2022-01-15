@@ -7,10 +7,30 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
+extension UserDefaults {
+    
+    var welcomeScreenShown: Bool {
+        get {
+            return (UserDefaults.standard.value(forKey: "welcomeScreenShown") as? Bool) ?? false
+        }
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: "welcomeScreenShown")
+        }
+    }
+    
+}
 
-        Home()
+struct ContentView: View {
+    @State var inHome = false
+
+    var body: some View {
+        
+        if UserDefaults.standard.welcomeScreenShown || inHome {
+            Home()
+        } else {
+            Welcome(inHome: $inHome)
+        }
+        
     }
 }
 
