@@ -18,9 +18,9 @@ struct Trip: Identifiable,Hashable{
 
 var trips = [
 
-    Trip(image: "006-cancer", title: "Confidein", subTitle: "Это клуб анонимных друзей"),
-    Trip(image: "015-hamsa", title: "Confidein", subTitle: "Когда вам нескем поговорить – здесь вас выслушают"),
-    Trip(image: "023-lotus", title: "Confidein", subTitle: "Безопасность и анонимность – мы не узнаем ни каких ваших данных"),
-    Trip(image: "032-peace sign", title: "Confidein", subTitle: "Получайте награды за роль слушателя"),
+    Trip(image: "006-cancer", title: "Confidein", subTitle: "A club of anonymous friends"),
+    Trip(image: "015-hamsa", title: "Confidein", subTitle: "When you need someone to talk to – this is the place"),
+    Trip(image: "023-lotus", title: "Confidein", subTitle: "Be safe and cool: we do not keep not share any personal data"),
+    Trip(image: "032-peace sign", title: "Confidein", subTitle: "Earn tokens by listening – use your spare time to help people"),
     
 ]

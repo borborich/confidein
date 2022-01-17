@@ -47,13 +47,13 @@ struct Welcome: View {
     @AppStorage("welcomeScreenShown") // UserDefaults
     var welcomeScreenShown: Bool = false
     // To capture the current tab...
-    @State private var userStatus: String = "firstName33"
-    @State private var userBlock: String = "lastName33"
-    @State private var username: String = "username33"
+    @State private var userStatus: String = "Pause"
+    @State private var userBlock: String = "0"
+    
     @State private var password: String = "password"
     
     @Binding var inHome: Bool
-    let deviceID = UIDevice.current.identifierForVendor?.uuidString
+    @State private var deviceID = UIDevice.current.identifierForVendor?.uuidString
    
     var manager = HttpAuth()
     @State var selectedTab: Trip = trips[0]
