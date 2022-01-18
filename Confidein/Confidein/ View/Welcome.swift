@@ -2,8 +2,12 @@ import SwiftUI
 import Combine
 
 
-struct ServerMessage: Decodable {
+struct ServerRegMessage: Decodable {
     let message: String
+}
+struct ServerLogMessage: Decodable {
+    let id: Int
+    let token: String
 }
 
 class HttpAuth: ObservableObject {
@@ -15,7 +19,7 @@ class HttpAuth: ObservableObject {
         }
     }
     
-    func checkDetails(userStatus: String, userBlock: String, username: String, password: String) {
+    func registration(userStatus: String, userBlock: String, username: String, password: String) {
         guard let url = URL(string: "http://217.25.89.74:4000/users/register") else { return }
         
         let body: [String: String] = ["userStatus": userStatus, "userBlock": userBlock, "username": username, "password": password]
@@ -32,13 +36,39 @@ class HttpAuth: ObservableObject {
            
             guard let data = data else { return }
             
-            let finalData = try! JSONDecoder().decode(ServerMessage.self, from: data)
+            let finalData = try! JSONDecoder().decode(ServerRegMessage.self, from: data)
             
             print(finalData)
             
             
         }.resume()
     }
+    
+    func login(username: String, password: String) {
+        guard let url = URL(string: "http://217.25.89.74:4000/users/authenticate") else { return }
+        
+        let body: [String: String] = ["username": username, "password": password]
+        
+        let finalBody = try! JSONSerialization.data(withJSONObject: body)
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = finalBody
+        
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+           
+            guard let data = data else { return }
+            
+            let loginData = try! JSONDecoder().decode(ServerLogMessage.self, from: data)
+            
+            print(loginData)
+            
+            
+        }.resume()
+    }
+    
 }
 
 
@@ -49,13 +79,12 @@ struct Welcome: View {
     // To capture the current tab...
     @State private var userStatus: String = "Pause"
     @State private var userBlock: String = "0"
-    
     @State private var password: String = "password"
-    
     @Binding var inHome: Bool
     @State private var deviceID = UIDevice.current.identifierForVendor?.uuidString
    
     var manager = HttpAuth()
+    var managerLogin = HttpAuth()
     @State var selectedTab: Trip = trips[0]
     
   
@@ -136,9 +165,20 @@ struct Welcome: View {
                     print(deviceID!)
                     self.inHome = true
                   
-                    self.manager.checkDetails(userStatus: self.userStatus, userBlock: self.userBlock, username: deviceID!, password: self.password)
+                    self.manager.registration(userStatus: self.userStatus, userBlock: self.userBlock, username: deviceID!, password: self.password)
+                    if #available(iOS 15.0, *) {
+                        Task.init {
+                            // Delay of 7.5 seconds (1 second = 1_000_000_000 nanoseconds)
+                            try? await Task.sleep(nanoseconds: 2_000_000_000)
+                            self.managerLogin.login(username: deviceID!, password: self.password)
+                        }
+                    } else {
+                        // Fallback on earlier versions
+                    }
+                    
+                    
                 }, label: {
-                    Text("НАЧАТЬ")
+                    Text("BEGIN")
                         .fontWeight(.bold)
                        
                         .foregroundColor(Color.black)
