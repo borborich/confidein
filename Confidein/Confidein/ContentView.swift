@@ -8,6 +8,24 @@
 import SwiftUI
 
 extension UserDefaults {
+
+    var token: String {
+        get {
+            return (UserDefaults.standard.value(forKey: "token") as? String) ?? "Token not receive"
+        }
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: "token")
+        }
+    }
+
+    var id: Int {
+        get {
+            return (UserDefaults.standard.value(forKey: "id") as? Int) ?? 0
+        }
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: "id")
+        }
+    }
     
     var welcomeScreenShown: Bool {
         get {
